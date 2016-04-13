@@ -77,3 +77,7 @@ solve_table := function(tc)
   od;
   return tc;
 end;
+
+resolve_coincidence := function()
+
+end;

@@ -27,3 +27,5 @@ true
 #
 # So why is D[4] above D[2]?
 #
+
+# Solved this - you have to left-multiply!

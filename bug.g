@@ -10,6 +10,11 @@ gap> Splash(DotString(S, rec(maximal := true)));
 
 # D[4] > D[2] > D[1]
 
+
+#Some changes to be lost forever!
+gap> g := (1,3,2);
+( 1, 3, 2 )
+
 # Consider the elements of D[4]
 gap> elms := Elements(D[4]);
 [ s2, s2^2 ]

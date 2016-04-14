@@ -79,5 +79,5 @@ solve_table := function(tc)
 end;
 
 resolve_coincidence := function(tc)
-
+  # Resolve a single coincidence in tc
 end;

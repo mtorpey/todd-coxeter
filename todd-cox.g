@@ -78,6 +78,6 @@ solve_table := function(tc)
   return tc;
 end;
 
-resolve_coincidence := function()
+resolve_coincidence := function(tc)
 
 end;

@@ -79,6 +79,7 @@ solve_table := function(tc)
 end;
 
 resolve_coincidence := function(tc)
+  local coin, keeprow, delrow, relno;
   # Resolve a single coincidence in tc
   coin := Remove(tc.coincidences, 1);
   keeprow := coin[1];
@@ -88,6 +89,13 @@ resolve_coincidence := function(tc)
   elif keeprow < delrow then
     for relno in [1 .. Length(tc.rels)] do
       # Combine the two entries
+      if tc.table[keeprow][relno] <> tc.table[delrow][relno] then
+        if tc.table[keeprow][relno] = -1 then
+          tc.table[keeprow][relno] := tc.table[delrow][relno];
+        elif tc.table[delrow][relno] <> -1 then
+          Add(tc.coincidences, [tc.table[keeprow][relno], tc.table[delrow][relno]]);
+        fi;
+      fi;
     od;
   fi;
 end;

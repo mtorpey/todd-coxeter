@@ -80,4 +80,14 @@ end;
 
 resolve_coincidence := function(tc)
   # Resolve a single coincidence in tc
+  coin := Remove(tc.coincidences, 1);
+  keeprow := coin[1];
+  delrow := coin[2];
+  if delrow < keeprow then
+    Add(tc.coincidences, [delrow, keeprow]);
+  elif keeprow < delrow then
+    for relno in [1 .. Length(tc.rels)] do
+      # Combine the two entries
+    od;
+  fi;
 end;

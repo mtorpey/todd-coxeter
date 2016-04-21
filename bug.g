@@ -34,3 +34,14 @@ true
 #
 
 # Solved this - you have to left-multiply!
+
+
+
+
+gap> Read("~/todd-coxeter/todd-cox.g");
+gap> S := FullTransformationMonoid(5);;
+gap> pairs := [[S.1, S.2^2]];;
+gap> cong := SemigroupCongruenceByGeneratingPairs(S, pairs);;
+gap> tab := semigroup_congruence_table(cong);;
+gap> solve_table(tab);; Size(tab.table)-1;
+1

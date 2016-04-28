@@ -98,8 +98,8 @@ end;
 solve_table := function(tc)
   local oldtable, rowno, relno;
   repeat
+    oldtable := StructuralCopy(tc.table);
     make_definition(tc);
-    oldtable := tc.table;
     for rowno in [1 .. Length(tc.table)] do
       if IsBound(tc.table[rowno]) then
         for relno in [1 .. Length(tc.rels)] do

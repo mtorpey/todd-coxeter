@@ -1,0 +1,6 @@
+identify -> identify_coset
+inver    -> preim_init
+occur    -> preim_next
+eqnTrace -> trace(add=true)
+laTrace  -> trace(add=false)
+d        -> current

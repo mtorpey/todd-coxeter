@@ -1,0 +1,19 @@
+active - Number of active cosets, doubly linked list
+       forwd - Forward references
+       backwd - Backward references
+       lust - Reference to end of list
+       d - Current coset
+       Last coset linked to free list
+
+free - Free cosets, simple linked list
+     forwd - Forward references
+     next - Reference to start of free list (0 if empty)
+
+table - Images of cosets under generators
+      table[i][c] - c^i - Image of coset c under gen i
+
+inver - Pre-images of cosets under generators
+      occur[i][c] - c^(i^-1) - Set of cosets which map to c under i
+      Empty set = 0
+      Used for replacing one coset with another everywhere
+      inver contains just ONE coset, occur contains some more
